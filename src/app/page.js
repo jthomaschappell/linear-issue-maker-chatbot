@@ -7,6 +7,9 @@ export default function Home() {
     { sender: "bot", text: "Hi! Paste your features or tasks and I'll help you turn them into Linear issues." }
   ]);
   const [loading, setLoading] = useState(false);
+  const [importLoading, setImportLoading] = useState(false);
+  const [importStatus, setImportStatus] = useState("");
+  const [lastIssuesJSON, setLastIssuesJSON] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,13 +36,39 @@ export default function Home() {
         ...msgs.slice(0, -1), // remove "Thinking..."
         { sender: "bot", text: data.issues ? `Here are your Linear issues:\n\n${data.issues}` : "Sorry, I couldn't parse your tasks." }
       ]);
+      setLastIssuesJSON(data.issues || "");
+      setImportStatus("");
     } catch (err) {
       setMessages((msgs) => [
         ...msgs.slice(0, -1),
         { sender: "bot", text: "Sorry, there was an error contacting OpenRouter." }
       ]);
+      setLastIssuesJSON("");
+      setImportStatus("");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleImport = async () => {
+    setImportLoading(true);
+    setImportStatus("");
+    try {
+      const res = await fetch("/api/linear", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ issues: lastIssuesJSON })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setImportStatus("Successfully imported issues to Linear!");
+      } else {
+        setImportStatus(data.error || "Failed to import issues to Linear.");
+      }
+    } catch (err) {
+      setImportStatus("Failed to import issues to Linear.");
+    } finally {
+      setImportLoading(false);
     }
   };
 
@@ -63,6 +92,20 @@ export default function Home() {
                   <pre className="mt-2 bg-gray-900 text-green-200 text-xs rounded p-2 overflow-x-auto">
                     {msg.text.split('\n\n')[1]}
                   </pre>
+                  {lastIssuesJSON && (
+                    <div className="mt-2 flex flex-col gap-2">
+                      <button
+                        className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition disabled:opacity-50"
+                        onClick={handleImport}
+                        disabled={importLoading}
+                      >
+                        {importLoading ? "Importing..." : "Import to Linear"}
+                      </button>
+                      {importStatus && (
+                        <div className="text-sm text-center" style={{ color: importStatus.startsWith('Successfully') ? 'green' : 'red' }}>{importStatus}</div>
+                      )}
+                    </div>
+                  )}
                 </>
               ) : msg.text}
             </div>

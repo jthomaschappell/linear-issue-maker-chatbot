@@ -1,0 +1,200 @@
+{
+  "data": {
+    "issues": {
+      "nodes": [
+        {
+          "id": "3f6d8cd0-076b-450b-bf26-5901c68fba71",
+          "title": "Pull up the app on the physical device."
+        },
+        {
+          "id": "9db230dd-9bcd-4d6f-99c7-94edc6fb97db", 
+          "title": "Pull up the app on Cursor"
+        },
+        {
+          "id": "4848a828-1a97-4716-94ab-aef420b422b1",
+          "title": "HEAD+3: Implement \"Go to Restaurant\" modal action"
+        },
+        {
+          "id": "e5242382-3012-4256-9745-e68cc7ee2a02",
+          "title": "HEAD+2: Add interactivity to map items with Restaurant modals"
+        },
+        {
+          "id": "55df0e8d-f642-4d8e-bdd9-6dea4c57aa4d",
+          "title": "HEAD+1: Implement clickable menu items with Restaurant Details page"
+        },
+        {
+          "id": "9436bf1d-406c-4624-99ba-636361e723cd",
+          "title": "HEAD: Test the app on yarn start"
+        },
+        {
+          "id": "bd8b136f-1944-4469-b238-eaa3a475c40e",
+          "title": "1) Test weird LLM update and see if it works."
+        },
+        {
+          "id": "f1782aec-905c-475c-8077-674bba7d492f",
+          "title": "BIG PICTURE: Groups due Tuesday."
+        },
+        {
+          "id": "09bd33b3-ffd8-405a-a2ed-375cb4ffe7c3",
+          "title": "HEAD: Remove hidden columns to see all your categories."
+        },
+        {
+          "id": "34559a2b-d9ee-4058-b40c-5de4f1a0dcaa",
+          "title": "Important: Talk to MISM guy about classes"
+        },
+        {
+          "id": "5a2f7b75-af8c-43df-b1e9-7a8f4b3b163d",
+          "title": "Click -> pull up details"
+        },
+        {
+          "id": "32af67dc-c2eb-4638-9ec7-3283e8c8a077",
+          "title": "Do the stuff you told Andrew."
+        },
+        {
+          "id": "51958afa-ce7f-498c-875e-45c1f1a8b970",
+          "title": "Jump Interview"
+        },
+        {
+          "id": "00ddeb35-0736-4d0d-829f-bbe61174846f",
+          "title": "WAIT: Meeting with Christian."
+        },
+        {
+          "id": "4706ae50-107a-44db-b210-b126eecf8e9b",
+          "title": "HEAD: Pull out the repository."
+        },
+        {
+          "id": "08318e1c-6faf-4551-aab2-20998eef10eb",
+          "title": "Study Elixir for your talk with the Jump CTO"
+        },
+        {
+          "id": "c82bbd16-7207-453a-abdb-0973d71cfaf5",
+          "title": "COME IN ON FRIDAY"
+        },
+        {
+          "id": "ebbb06df-6b18-4feb-a3c0-493299253ed4",
+          "title": "HEAD: Work with Andrew today."
+        },
+        {
+          "id": "31ecd6a2-b5ac-4c4f-bd37-849a92d0d84d",
+          "title": "Read all the emails."
+        },
+        {
+          "id": "583507ba-1be0-40b0-836c-62e1a97679db",
+          "title": "3) Implement new payment flow with the Figma designs."
+        },
+        {
+          "id": "7a864fc3-6d89-4dc8-83c6-7547dd3b8b4a",
+          "title": "DONE: Find the bug in the code for Jump."
+        },
+        {
+          "id": "18b90853-8d13-40e5-9304-6249adfc38a4",
+          "title": "4) Finish the App Script that pulls the trigger logs from Firestore --> populate them into a Google Sheet."
+        },
+        {
+          "id": "3cb747e0-2aee-4b00-9a72-99e1dd96f129",
+          "title": "HEAD: Commit this update suggested by Cursor to replace the session with a new one with the updated timestamp."
+        },
+        {
+          "id": "4b7d904a-71e9-4957-ba44-4ed3014ef5af",
+          "title": "DrawFi"
+        },
+        {
+          "id": "5e6f99f2-9160-4ce7-acfe-a9b42f8061b5",
+          "title": "Triple check your action items with the Discord notes."
+        },
+        {
+          "id": "a0a2c42d-7ce9-4c80-84c5-13fa62d847af",
+          "title": "Wait for Andrew Darley to return"
+        },
+        {
+          "id": "f558add2-b68c-4e3b-a33b-239f7f9c7c33",
+          "title": "Work with Chretien at UVU"
+        },
+        {
+          "id": "2192711e-b4ed-4522-bfc2-bb9e723d1586",
+          "title": "2) Add crash logs for visibility. We want to know why it is crashing on someone else's phone."
+        },
+        {
+          "id": "564771fd-3c3e-4b51-81e7-2f47ee88d449",
+          "title": "THIS WEEK: Release the cloud LLM version to Hayden"
+        },
+        {
+          "id": "6eb7ac8d-12d8-4ce6-906f-991625efb1a8",
+          "title": "Check the .env files"
+        },
+        {
+          "id": "1c913b14-9e7d-481d-a5da-debc189462a6",
+          "title": "WEDNESDAY: Release AI-powered Recommenu"
+        },
+        {
+          "id": "9cc790da-50aa-4c41-882a-cfd893a1f399",
+          "title": "TUESDAY: Work with Jordan on the backend frontend connection"
+        },
+        {
+          "id": "a0c0d94b-24e2-41a5-a33c-c5e8202e4ea5",
+          "title": "HEAD: Read the first email."
+        },
+        {
+          "id": "f5e98201-fd75-4d4f-806c-b6522ec09f77",
+          "title": "TODAY: Focus your Git repository"
+        },
+        {
+          "id": "2a734596-5e5a-44fe-b590-fe86730b92aa",
+          "title": "EMTECH"
+        },
+        {
+          "id": "73fed0d9-19b5-44ee-a822-f29833ebd959",
+          "title": "Recommenu"
+        },
+        {
+          "id": "a54ab142-7cd0-47a1-a5e9-9806754441fb",
+          "title": "Bardy"
+        },
+        {
+          "id": "4da7c986-54f9-4ed1-aead-e3254e4bedfa",
+          "title": "Meridio"
+        },
+        {
+          "id": "9dcb6836-f808-45d3-9847-f7d70189f08f",
+          "title": "Bardy"
+        },
+        {
+          "id": "d7a7eac2-d2fa-4a80-b56b-aff809fd7698",
+          "title": "Next steps"
+        },
+        {
+          "id": "be97a63c-efd8-49dd-b5f2-7b73bd665e31",
+          "title": "Invite your teammates"
+        },
+        {
+          "id": "978e37cd-6072-45dd-adb4-22f9eb1f47c2",
+          "title": "Use Cycles to focus work over n–weeks"
+        },
+        {
+          "id": "8cc00600-9ec2-4ab5-9002-20447f6b81ec",
+          "title": "Connect to Slack"
+        },
+        {
+          "id": "86b75769-7cea-4c5e-a3e7-936e62ca8f65",
+          "title": "Customize settings"
+        },
+        {
+          "id": "837f2de2-b1ee-4b6c-a43f-de98f73e1794",
+          "title": "Connect GitHub or GitLab"
+        },
+        {
+          "id": "66c454ce-cb33-4293-8ed6-45e2c30b74d5",
+          "title": "Use Projects to organize work for features or releases"
+        },
+        {
+          "id": "405dba30-5e6a-4554-a81a-f5e82da192a8",
+          "title": "3 ways to navigate Linear: Command menu, keyboard or mouse"
+        },
+        {
+          "id": "0c49549a-ea7b-4681-8210-dfdef7410f22",
+          "title": "Welcome to Linear 👋"
+        }
+      ]
+    }
+  }
+}
