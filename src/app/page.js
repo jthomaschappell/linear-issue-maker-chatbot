@@ -8,46 +8,38 @@ export default function Home() {
   ]);
   const [loading, setLoading] = useState(false);
 
-  // Only the first user message triggers OpenRouter for now
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-    const isFirstUserMsg = messages.filter(m => m.sender === "user").length === 0;
     setMessages((msgs) => [
       ...msgs,
       { sender: "user", text: input }
     ]);
     setInput("");
-    if (isFirstUserMsg) {
-      setLoading(true);
+    setLoading(true);
+    setMessages((msgs) => [
+      ...msgs,
+      { sender: "bot", text: "Thinking..." }
+    ]);
+    try {
+      const res = await fetch("/api/openrouter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tasks: input })
+      });
+      const data = await res.json();
+      console.log('OpenRouter response:', data); // Added debug log
       setMessages((msgs) => [
-        ...msgs,
-        { sender: "bot", text: "Thinking..." }
+        ...msgs.slice(0, -1), // remove "Thinking..."
+        { sender: "bot", text: data.issues ? `Here are your Linear issues:\n\n${data.issues}` : "Sorry, I couldn't parse your tasks." }
       ]);
-      try {
-        const res = await fetch("/api/openrouter/route", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ tasks: input })
-        });
-        const data = await res.json();
-        setMessages((msgs) => [
-          ...msgs.slice(0, -1), // remove "Thinking..."
-          { sender: "bot", text: data.issues ? `Here are your Linear issues:\n\n${data.issues}` : "Sorry, I couldn't parse your tasks." }
-        ]);
-      } catch (err) {
-        setMessages((msgs) => [
-          ...msgs.slice(0, -1),
-          { sender: "bot", text: "Sorry, there was an error contacting OpenRouter." }
-        ]);
-      } finally {
-        setLoading(false);
-      }
-    } else {
+    } catch (err) {
       setMessages((msgs) => [
-        ...msgs,
-        { sender: "bot", text: input }
+        ...msgs.slice(0, -1),
+        { sender: "bot", text: "Sorry, there was an error contacting OpenRouter." }
       ]);
+    } finally {
+      setLoading(false);
     }
   };
 
